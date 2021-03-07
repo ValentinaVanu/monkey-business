@@ -4,7 +4,7 @@ import druid from '../../img/DruidMonkey.png'
 import dart from '../../img/DartMonkey.png'
 import { MonkeyWrapper, StyledFab, StyledImg } from './monkey.style';
 import { useDispatch, useSelector } from 'react-redux';
-import { setMonkeyAction } from '../../store/monkey.action';
+import { addMonkeyAction } from '../../store/monkey.action';
 
 
 const Monkey = () => {
@@ -16,7 +16,7 @@ const Monkey = () => {
   ])
   
   const handleClick = e => {
-    dispatch(setMonkeyAction(e.target.name))
+    dispatch(addMonkeyAction(e.target.name))
   }
 
   console.log(wizardNum, druidNum, dartNum)

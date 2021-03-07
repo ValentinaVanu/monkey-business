@@ -13,6 +13,7 @@ export const MonkeyWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  grid-row: 1/-1;
 `
 
 export const StyledImg = styled.img`

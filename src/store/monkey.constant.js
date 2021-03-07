@@ -1,2 +1,2 @@
-export const SET_MONKEY = '[monkey] SET_MONKEY'
-export const MONKEY_COUNT = '[monkey] MONKEY_COUNT'
+export const ADD_MONKEY = '[monkey] ADD_MONKEY'
+export const GROUP_MONKEY = '[monkey-team] GROUP_MONKEY'

@@ -10,13 +10,15 @@ export const initialState = {
   dartMonkey:{
     count: 0,
   },
-  collection : []
+  collection : [],
+  groupBy : 0
 }
 
 export const monkeyReducer = ( state = initialState, action ) => {
   console.log('actiune', action)
+
   switch (action.type) {
-    case constant.SET_MONKEY :
+    case constant.ADD_MONKEY :
       return {
         ...state,
         collection: [...state.collection, action.which],
@@ -25,7 +27,11 @@ export const monkeyReducer = ( state = initialState, action ) => {
           count: state[action.which].count + 1,
         }
       }
-      
+      case constant.GROUP_MONKEY :
+        return {
+          ...state,
+          groupBy : action.groupBy,
+        }
     default:
       return state
   }

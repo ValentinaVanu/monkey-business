@@ -1,11 +1,11 @@
 import * as constant from './monkey.constant'
 
-export const setMonkeyAction = which => ({
-  type: constant.SET_MONKEY,
+export const addMonkeyAction = which => ({
+  type: constant.ADD_MONKEY,
   which
 })
 
-export const monkeyCountAction = count => ({
-  type: constant.MONKEY_COUNT,
-  count
+export const groupMonkeyAction = groupBy => ({
+  type: constant.GROUP_MONKEY,
+  groupBy
 })

@@ -1,5 +1,14 @@
-import { AppBar, makeStyles } from '@material-ui/core'
+import { AppBar, makeStyles, TextField } from '@material-ui/core'
 import styled from 'styled-components'
+
+
+export const StyledTextField = styled(TextField)`
+  && {
+    & > label {
+      color: #fff;
+    }
+  }
+`
 
 export const StyledAppBar = styled(AppBar)`
   && {
@@ -11,6 +20,11 @@ export const StyledMonkeyMenu = styled.div`
   height: 100%;
 `
 export const useStyles = makeStyles((theme) => ({
+  '@global': {
+    '.MuiOutlinedInput-input': {
+      color: '#fff'
+    }
+  },
   text: {
     padding: theme.spacing(2, 2, 0),
   },

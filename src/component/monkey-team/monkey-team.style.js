@@ -7,6 +7,8 @@ export const StyledMonkeyImg = styled.img`
 `
 
 export const StyledMonkeyTeam = styled.div`
+  margin: 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
