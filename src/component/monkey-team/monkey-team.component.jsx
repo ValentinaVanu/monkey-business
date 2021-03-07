@@ -8,17 +8,17 @@ import * as SMT from './monkey-team.style'
 
 const MonkeyTeam = () => {
   const[ wizardNum, druidNum, dartNum] = useSelector(({ monkey }) => [
-    monkey.wizardMonkey,
-    monkey.druidMonkey,
-    monkey.dartMonkey,
+    monkey.wizardMonkey.count,
+    monkey.druidMonkey.count,
+    monkey.dartMonkey.count,
   ])
 
   return (
     <SMT.StyledPaper>
       <SMT.StyledMonkeyTeam>
-        {wizardNum && <SMT.StyledMonkeyImg src={wizard} alt="wizard-monkey"/>}
-        {druidNum && <SMT.StyledMonkeyImg src={druid} alt="wizard-monkey"/>}
-        {dartNum && <SMT.StyledMonkeyImg src={dart} alt="wizard-monkey"/>}
+        {wizardNum !== 0 && Array.from({length: wizardNum}, () => <SMT.StyledMonkeyImg src={wizard} alt="wizard-monkey"/>)}
+        {druidNum !== 0 && Array.from({length: druidNum}, () => <SMT.StyledMonkeyImg src={druid} alt="wizard-monkey"/>)}
+        {dartNum !== 0 && Array.from({length: dartNum}, () => <SMT.StyledMonkeyImg src={dart} alt="wizard-monkey"/>) }
       </SMT.StyledMonkeyTeam>
     </SMT.StyledPaper>
   )

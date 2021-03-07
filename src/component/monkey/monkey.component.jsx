@@ -4,19 +4,19 @@ import druid from '../../img/DruidMonkey.png'
 import dart from '../../img/DartMonkey.png'
 import { MonkeyWrapper, StyledFab, StyledImg } from './monkey.style';
 import { useDispatch, useSelector } from 'react-redux';
-import { monkeyCountAction } from '../../store/monkey.action';
+import { setMonkeyAction } from '../../store/monkey.action';
 
 
 const Monkey = () => {
   const dispatch = useDispatch()
   const[ wizardNum, druidNum, dartNum] = useSelector(({ monkey }) => [
-    monkey.wizardMonkey,
-    monkey.druidMonkey,
-    monkey.dartMonkey,
+    monkey.wizardMonkey.count,
+    monkey.druidMonkey.count,
+    monkey.dartMonkey.count,
   ])
   
   const handleClick = e => {
-    dispatch(monkeyCountAction(e.target.name))
+    dispatch(setMonkeyAction(e.target.name))
   }
 
   console.log(wizardNum, druidNum, dartNum)
