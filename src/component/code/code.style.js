@@ -14,6 +14,7 @@ export const StyledButton = styled.button`
   padding: 10px 20px;
   border-radius: 8px;
   border: 0;
+  cursor: pointer;
 `
 
 export const StyledPaper = styled(Paper)`
