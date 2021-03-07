@@ -1,9 +1,9 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import store from '../../store'
+import { Code } from '../code'
 import { Instructions } from '../instructions'
 import { Map } from '../map'
-import { Monkey } from '../monkey'
 import { MonkeyMenu } from '../monkey-menu'
 import { MonkeyTeam } from '../monkey-team/monkey-team.component'
 
@@ -14,6 +14,7 @@ const App = () => {
         <Map>
           <Instructions />
           <MonkeyTeam />
+          <Code />
         </Map>
         <MonkeyMenu />
       </Provider>
