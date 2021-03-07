@@ -5,6 +5,7 @@ import druid from '../../img/DruidMonkey.png'
 import dart from '../../img/DartMonkey.png'
 
 import * as SMT from './monkey-team.style'
+import { combineArray } from '../../util'
 
 const monkeyImgs = {
   wizardMonkey: wizard,
@@ -24,7 +25,7 @@ const MonkeyTeam = () => {
 
   useEffect(
     () => {
-      setGroup(Array.from({length: groupBy}, (_, key) => collection.slice(key * Math.ceil(collection.length / groupBy), (key + 1) * Math.ceil(collection.length / groupBy))))
+      setGroup(combineArray(collection, groupBy))
     },
     [wizardNum, druidNum, dartNum, groupBy]
   )
