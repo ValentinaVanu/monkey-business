@@ -40,6 +40,7 @@ export const useStyles = makeStyles((theme) => ({
   appBar: {
     top: 'auto',
     bottom: 0,
+    padding:'1rem 2rem',
   },
   grow: {
     flexGrow: 1,

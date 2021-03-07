@@ -11,12 +11,10 @@ export const initialState = {
     count: 0,
   },
   collection : [],
-  groupBy : 0
+  groupBy : 2
 }
 
 export const monkeyReducer = ( state = initialState, action ) => {
-  console.log('actiune', action)
-
   switch (action.type) {
     case constant.ADD_MONKEY :
       return {

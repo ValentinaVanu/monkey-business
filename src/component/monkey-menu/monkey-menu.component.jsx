@@ -5,11 +5,12 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 
 import { Monkey } from '../monkey/monkey.component';
 import { StyledAppBar, StyledTextField, useStyles } from './monkey-menu.style';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { groupMonkeyAction } from '../../store/monkey.action';
 
 const MonkeyMenu = () => {
   const dispatch = useDispatch()
+  const groupBy = useSelector(({ monkey }) => monkey.groupBy)
 
   const classes = useStyles();
   const handleChange = e => {
@@ -22,6 +23,7 @@ const MonkeyMenu = () => {
         <Monkey />
         <div className={classes.grow} />
         <StyledTextField
+          value={groupBy}
           id="outlined-basic"
           onChange={handleChange}
           type="number"
